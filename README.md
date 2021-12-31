@@ -10,17 +10,13 @@
 	clone into ~
 
 ## server
-	mkdir sshfsrestartsignal
-	put contents of server folder in ~ and make them executable
-	fix user/host
-	
 ### sshfsrestarter.sh
 	optional - adjust date timezone offset or remove/comment out (only there for log readability)
 ### sshfs-restart.sh
 	edit "fusermount -uz dirname1" with your sshfs dir
 	> repeat that line for each sshfs dir
 	optional - adjust date timezone offset or remove/comment out (only there for log readability)
-### razadirs-sshfs.sh
+### mount-dirs-sshfs.sh
 	edit the following part for your sshfs mount
 	> user@host:path /home/server_user/dir/ -p number
 	repeat line for each other dir
@@ -43,7 +39,7 @@
 
 ## monitor
 	add this to cron
-	> */15 * * * * ~/Desktop/sshfsmanager.sh
+	> */15 * * * * ~/sshfsrestarter/sshfsmanager.sh
 
 
 # how works
