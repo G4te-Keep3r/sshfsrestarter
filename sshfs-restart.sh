@@ -1,5 +1,5 @@
 pkill -kill -f "sshfs"
-fusermount -uz dir_name_goes_here
+fusermount -uz ~/dir_name_goes_here
 #repeat for other dirs
 
 ./mount-dirs-sshfs.sh

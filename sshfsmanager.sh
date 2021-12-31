@@ -1,8 +1,8 @@
-userathost = serveruser@serverhost
+userathost=serveruser@serverhost
 
 date >> ~/sshfsrestarter/sshfsmanager.log
 
-sshout=$(timeout 600 ssh $userathost ./sshfsrestarter/testsshfs.sh)
+sshout=$(timeout 600 ssh $userathost '~/sshfsrestarter/testsshfs.sh')
 
 if [ `echo "$sshout" | wc -l` -le 1234567890 ]; then 
     echo "$sshout" | wc -l >> ~/sshfsrestarter/sshfsmanager.log
