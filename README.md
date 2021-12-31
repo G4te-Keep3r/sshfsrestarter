@@ -13,7 +13,7 @@
 ### sshfsrestarter.sh
 	optional - adjust date timezone offset or remove/comment out (only there for log readability)
 ### sshfs-restart.sh
-	edit "fusermount -uz dirname1" with your sshfs dir
+	edit "fusermount -uz dir_name_goes_here" with your sshfs dir
 	> repeat that line for each sshfs dir
 	optional - adjust date timezone offset or remove/comment out (only there for log readability)
 ### mount-dirs-sshfs.sh
@@ -31,6 +31,7 @@
 	fix userathost
 	replace 1234567890 with the number from testsshfs.sh
 	> you might want to subtract some from it so if you remove files the monitor wont always send restart signal, just make sure you choose a number larger than "ls ~ | wc -l" gives (on server)
+	optional - adjust date timezone offset or remove/comment out (only there for log readability)
 
 
 # run
